@@ -1,0 +1,218 @@
+{
+  "contractName": "TransactionContract",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/Ethereum/Contract/TransactionContract.sol\":\"TransactionContract\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/Ethereum/Contract/TransactionContract.sol\":{\"keccak256\":\"0x947f3c0e4defddfae53ce354eaf0b4b9579364f690181d7b2ed5bcaa44a1d249\",\"urls\":[\"bzzr://7c280898991cc31a4d0fc0c4142cf273640a4e139b404ca7d11de7fbdd27407a\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820de395fc52ebd034ce157dd1d7e8b910b6fb8c4fb6db9d251a8aad9ea1b5b009a0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820de395fc52ebd034ce157dd1d7e8b910b6fb8c4fb6db9d251a8aad9ea1b5b009a0029",
+  "sourceMap": "66:61:2:-;;;99:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;99:26:2;66:61;;;;;;",
+  "deployedSourceMap": "66:61:2:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract TransactionContract {\n  constructor() public {\n  }\n}\n",
+  "sourcePath": "D:\\Shubham\\Ethereum\\BlockChainVoting\\Ethereum\\Contract\\TransactionContract.sol",
+  "ast": {
+    "absolutePath": "project:/Ethereum/Contract/TransactionContract.sol",
+    "exportedSymbols": {
+      "TransactionContract": [
+        385
+      ]
+    },
+    "id": 386,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 380,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 385,
+        "linearizedBaseContracts": [
+          385
+        ],
+        "name": "TransactionContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 383,
+              "nodeType": "Block",
+              "src": "120:5:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 384,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 381,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:2:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 382,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "120:0:2"
+            },
+            "scope": 385,
+            "src": "99:26:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 386,
+        "src": "66:61:2"
+      }
+    ],
+    "src": "32:96:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/Ethereum/Contract/TransactionContract.sol",
+      "exportedSymbols": {
+        "TransactionContract": [
+          385
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 380,
+        "name": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            385
+          ],
+          "name": "TransactionContract",
+          "scope": 386
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "payable": false,
+              "scope": 385,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 381,
+                "name": "ParameterList",
+                "src": "110:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 382,
+                "name": "ParameterList",
+                "src": "120:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 383,
+                "name": "Block",
+                "src": "120:5:2"
+              }
+            ],
+            "id": 384,
+            "name": "FunctionDefinition",
+            "src": "99:26:2"
+          }
+        ],
+        "id": 385,
+        "name": "ContractDefinition",
+        "src": "66:61:2"
+      }
+    ],
+    "id": 386,
+    "name": "SourceUnit",
+    "src": "32:96:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-01-11T13:49:46.874Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

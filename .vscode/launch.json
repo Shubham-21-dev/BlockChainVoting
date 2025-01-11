@@ -1,0 +1,92 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\server.js"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Client",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/pages", // Adjust this path to your React src directory 
+            "sourceMaps": true, 
+            "sourceMapPathOverrides": {
+                "webpack:///src/*": "${webRoot}/*"
+            },
+            "outFiles": [
+                "${workspaceFolder}/.next/**/*.js"
+            ],
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch App",
+            "configurations": [
+                "Launch Server",
+                "Launch Client"
+            ]
+        }
+    ]
+}
+
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "type": "node",
+//             "request": "launch",
+//             "name": "Launch Next.js Server",
+//             "program": "${workspaceFolder}/node_modules/.bin/next",
+//             "args": [
+//                 "dev"
+//             ],
+//             "cwd": "${workspaceFolder}",
+//             "autoAttachChildProcesses": true,
+//             "outFiles": [
+//                 "${workspaceFolder}/.next/**/*.js"
+//             ],
+//             "restart": true,
+//             "runtimeExecutable": null,
+//             "runtimeArgs": [
+//                 "--inspect"
+//             ],
+//             "port": 9229,
+//             "sourceMaps": true,
+//             "env": {
+//                 "NODE_ENV": "development"
+//             }
+//         },
+//         {
+//             "type": "chrome",
+//             "request": "launch",
+//             "name": "Attach to Chrome",
+//             "url": "http://localhost:3000",
+//             "webRoot": "${workspaceFolder}/pages",
+//             "sourceMaps": true,
+//             "sourceMapPathOverrides": {
+//                 "webpack:///./*": "${workspaceFolder}/*",
+//                 "webpack:///src/*": "${webRoot}/src/*",
+//                 "webpack:///*": "${workspaceFolder}/*"
+//             }
+//         }
+//     ],
+//     "compounds": [
+//         {
+//             "name": "Launch Next.js App",
+//             "configurations": [
+//                 "Launch Next.js Server",
+//                 "Attach to Chrome"
+//             ]
+//         }
+//     ]
+// }
