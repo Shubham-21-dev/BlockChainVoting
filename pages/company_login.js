@@ -92,7 +92,10 @@ class DividerExampleVerticalForm extends Component {
       http.send(params); 
       try {
         const accounts = await web3.eth.getAccounts();
+        console.log("accounts", accounts)
+        console.log("this.state",this.state)
         const summary = await Election_Factory.methods.getDeployedElection(this.state.email).call({from: accounts[0]});
+        console.log("summary",summary);
         if(summary[2] == "Create an election.") {            
             Router.pushRoute(`/election/create_election`);
         }
@@ -102,7 +105,7 @@ class DividerExampleVerticalForm extends Component {
         }
     }
     catch (err) {
-        console.log(err.Message);
+        console.log(err);
     }
   }
 

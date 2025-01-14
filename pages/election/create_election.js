@@ -19,12 +19,14 @@ class LoginForm extends Component {
 		try {
 			const email = Cookies.get('company_email');
 			const accounts = await web3.eth.getAccounts();
+			console.log(accounts)
+			console.log("account index 0:",accounts[0]);
 			const bool = await Election_Factory.methods
 				.createElection(email, this.state.election_name, this.state.election_description)
 				.send({ from: accounts[0] });
 
-			if (bool) {
-				const summary = await Election_Factory.methods.getDeployedElection('xyz').call();
+			if (bool != null) {
+				const summary = await Election_Factory.methods.getDeployedElection(email).call();
 				this.setState({ loading: false });
 				Cookies.set('address', summary[0]);
 				Router.pushRoute(`/election/${summary[0]}/company_dashboard`);

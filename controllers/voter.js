@@ -34,18 +34,16 @@ module.exports = {
 
 									console.log(req.body.election_name);
 
-									var transporter = nodemailer.createTransport({
-										service: 'gmail',
-
+									var transporter = nodemailer.createTransport({										host: "sandbox.smtp.mailtrap.io",
+										port: 2525,
 										auth: {
-											user: process.env.EMAIL,
-
-											pass: process.env.PASSWORD,
-										},
+											user: "0802c5ad7e5fbe",
+    										pass: "37791ba9016ece"
+										}
 									});
 
 									const mailOptions = {
-										from: process.env.EMAIL, // sender address
+										from: '"Voting DApp" <admin@dapp.com>', // sender address
 
 										to: voter.email, // list of receivers
 
@@ -152,15 +150,15 @@ module.exports = {
 						if (err) cb(err);
 						else {
 							console.log('Inside find after update' + voterInfo);
-							var transporter = nodemailer.createTransport({
-								service: 'gmail',
+							var transporter = nodemailer.createTransport({										host: "sandbox.smtp.mailtrap.io",
+								port: 2525,
 								auth: {
-									user: process.env.EMAIL,
-									pass: process.env.PASSWORD,
-								},
+									user: "0802c5ad7e5fbe",
+									pass: "37791ba9016ece"
+								}
 							});
 							const mailOptions = {
-								from: process.env.EMAIL, // sender address
+								from: '"Voting DApp" <admin@dapp.com>', // sender address
 								to: voterInfo.email, // list of receivers
 								subject: req.body.election_name, // Subject line
 								html:
@@ -212,18 +210,16 @@ module.exports = {
 				const winner_candidate = req.body.winner_candidate;
 
 				for (let voter of voters) {
-					var transporter = nodemailer.createTransport({
-						service: 'gmail',
-
+					var transporter = nodemailer.createTransport({										host: "sandbox.smtp.mailtrap.io",
+						port: 2525,
 						auth: {
-							user: process.env.EMAIL,
-
-							pass: process.env.PASSWORD,
-						},
+							user: "0802c5ad7e5fbe",
+							pass: "37791ba9016ece"
+						}
 					});
 
 					const mailOptions = {
-						from: process.env.EMAIL, // sender address
+						from: '"Voting DApp" <admin@dapp.com>', // sender address
 
 						to: voter.email, // list of receivers
 
@@ -248,18 +244,16 @@ module.exports = {
 					});
 				}
 
-				var transporter = nodemailer.createTransport({
-					service: 'gmail',
-
+				var transporter = nodemailer.createTransport({										host: "sandbox.smtp.mailtrap.io",
+					port: 2525,
 					auth: {
-						user: process.env.EMAIL,
-
-						pass: process.env.PASSWORD,
-					},
+						user: "0802c5ad7e5fbe",
+						pass: "37791ba9016ece"
+					}
 				});
 
 				const mailOptions = {
-					from: process.env.EMAIL, // sender address
+					from: '"Voting DApp" <admin@dapp.com>', // sender address
 
 					to: req.body.candidate_email, // list of receivers
 

@@ -3,7 +3,7 @@ import Election from './Build/Election.json';
 
 export default address => {
     return new web3.eth.Contract(
-        JSON.parse(Election.interface),
+        Election.abi,
         address
     );  
 };
